@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { personas, getPersonaIdByAgentName } from "@/lib/personas";
 import type { Persona } from "@/lib/personas";
+import { VisualizationsPanel } from "@/components/visualizations";
 import actionsData from "@/data/actions.json";
 
 // ---------------------------------------------------------------------------
@@ -401,6 +402,7 @@ export function SynchronyPanel({ reportMd }: { reportMd: string }) {
             <TabsTrigger value={0}>Report</TabsTrigger>
             <TabsTrigger value={1}>Simulation Feed</TabsTrigger>
             <TabsTrigger value={2}>Chat with Panelists</TabsTrigger>
+            <TabsTrigger value={3}>Analytics</TabsTrigger>
           </TabsList>
         </div>
 
@@ -414,6 +416,10 @@ export function SynchronyPanel({ reportMd }: { reportMd: string }) {
 
         <TabsContent value={2} className="flex-1 min-h-0">
           <ChatTab />
+        </TabsContent>
+
+        <TabsContent value={3} className="flex-1 min-h-0 overflow-y-auto">
+          <VisualizationsPanel />
         </TabsContent>
       </Tabs>
     </div>
