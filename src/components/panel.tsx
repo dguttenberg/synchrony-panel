@@ -31,7 +31,7 @@ function markdownToHtml(md: string): string {
     // Blockquotes
     .replace(
       /^> (.+)$/gm,
-      '<blockquote class="border-l-4 border-gray-300 pl-4 my-2 text-gray-600 italic text-sm">$1</blockquote>'
+      '<blockquote class="border-l-4 pl-4 my-2 text-sm italic" style="border-color: #545DFF; color: #6b7280;">$1</blockquote>'
     )
     // Bold and italic
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
@@ -44,7 +44,7 @@ function markdownToHtml(md: string): string {
     // Unordered lists
     .replace(/^- (.+)$/gm, '<li class="ml-4 list-disc mb-1">$1</li>')
     // Horizontal rules
-    .replace(/^---$/gm, '<hr class="my-6 border-gray-200" />')
+    .replace(/^---$/gm, '<hr class="my-6" style="border-color: rgba(0,5,49,0.1);" />')
     // Paragraphs (blank lines)
     .replace(/\n\n/g, "</p><p class='mb-3'>")
     // Line breaks
@@ -114,7 +114,7 @@ function FeedItem({ action }: { action: ActionItem }) {
   const isComment = action.action_type === "CREATE_COMMENT";
 
   return (
-    <Card className={isComment ? "ml-8" : ""} size="sm">
+    <Card className={isComment ? "ml-8" : ""} size="sm" style={{ borderRadius: 12 }}>
       <CardContent>
         <div className="flex items-start gap-3">
           <div
@@ -182,11 +182,15 @@ function ChatTab() {
               <button
                 key={persona.id}
                 onClick={() => setSelectedPersona(persona)}
-                className={`w-full text-left px-3 py-2.5 rounded-lg transition-colors ${
+                className={`w-full text-left px-3 py-2.5 transition-colors ${
                   selectedPersona?.id === persona.id
-                    ? "bg-accent"
+                    ? "bg-accent/10 border-l-2"
                     : "hover:bg-muted"
                 }`}
+                style={{
+                  borderRadius: 8,
+                  borderLeftColor: selectedPersona?.id === persona.id ? "#545DFF" : "transparent",
+                }}
               >
                 <div className="flex items-center gap-2.5">
                   <div
@@ -226,8 +230,8 @@ function ChatTab() {
                 Select a panelist to chat with
               </p>
               <p className="text-sm">
-                Ask follow-up questions about their reactions to The Flip, The
-                Signal, or The Gathering
+                Ask follow-up questions about their reactions to The Golden Door,
+                10/10, or The Rescue
               </p>
             </div>
           </div>
@@ -306,7 +310,7 @@ function ChatPanel({ persona }: { persona: Persona }) {
           <div className="text-center text-muted-foreground text-sm py-8">
             <p>
               Start a conversation with {persona.name}. Ask about their
-              reactions to The Flip, The Signal, or The Gathering.
+              reactions to The Golden Door, 10/10, or The Rescue.
             </p>
           </div>
         )}
@@ -326,9 +330,13 @@ function ChatPanel({ persona }: { persona: Persona }) {
               className={`flex ${isUser ? "justify-end" : "justify-start"}`}
             >
               <div
-                className={`max-w-[80%] rounded-lg px-3.5 py-2.5 text-sm leading-relaxed ${
-                  isUser ? "bg-primary text-primary-foreground" : "bg-muted"
+                className={`max-w-[80%] px-3.5 py-2.5 text-sm leading-relaxed ${
+                  isUser ? "text-white" : "bg-muted"
                 }`}
+                style={{
+                  borderRadius: 12,
+                  backgroundColor: isUser ? "#000531" : undefined,
+                }}
               >
                 <p className="whitespace-pre-wrap">{textContent}</p>
               </div>
@@ -337,7 +345,7 @@ function ChatPanel({ persona }: { persona: Persona }) {
         })}
         {chat.status === "submitted" && (
           <div className="flex justify-start">
-            <div className="bg-muted rounded-lg px-3.5 py-2.5 text-sm text-muted-foreground">
+            <div className="bg-muted px-3.5 py-2.5 text-sm text-muted-foreground" style={{ borderRadius: 12 }}>
               {persona.name} is typing...
             </div>
           </div>
@@ -353,7 +361,8 @@ function ChatPanel({ persona }: { persona: Persona }) {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             placeholder={`Ask ${persona.name} a question...`}
-            className="flex-1 rounded-lg border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            className="flex-1 border px-3 py-2 text-sm focus:outline-none focus:ring-2"
+            style={{ borderRadius: 12, borderColor: "rgba(0,5,49,0.1)" }}
             disabled={
               chat.status === "streaming" || chat.status === "submitted"
             }
@@ -365,6 +374,7 @@ function ChatPanel({ persona }: { persona: Persona }) {
               chat.status === "streaming" ||
               chat.status === "submitted"
             }
+            style={{ borderRadius: 12, backgroundColor: "#000531" }}
           >
             Send
           </Button>
@@ -381,28 +391,50 @@ export function SynchronyPanel({ reportMd }: { reportMd: string }) {
   return (
     <div className="flex flex-col h-screen">
       {/* Header */}
-      <header className="bg-zinc-900 text-white px-6 py-3 flex items-center justify-between flex-shrink-0">
-        <div className="flex items-center gap-3">
-          <h1 className="text-lg font-semibold tracking-tight">
-            Synchrony Panel
-          </h1>
-          <span className="text-zinc-400 text-sm hidden sm:inline">
-            Brand Activation Research
-          </span>
+      <header
+        className="px-6 py-3 flex items-center justify-between flex-shrink-0"
+        style={{ backgroundColor: "#000531" }}
+      >
+        <div className="flex items-center gap-4">
+          {/* DCP Logo Mark */}
+          <div className="flex items-center gap-2">
+            <span className="text-xl font-bold tracking-tight" style={{ color: "#20FE8F" }}>
+              DCP
+            </span>
+            <span
+              className="pl-2 text-sm font-medium text-white"
+              style={{ borderLeft: "1px solid rgba(255,255,255,0.3)" }}
+            >
+              DonerColle Partners.
+            </span>
+          </div>
+          <div className="hidden sm:block ml-2">
+            <h1 className="text-base font-semibold tracking-tight text-white">
+              Synchrony Elevation Brief
+            </h1>
+            <p className="text-xs" style={{ color: "#9ca3af" }}>
+              Audience Simulation Panel
+            </p>
+          </div>
         </div>
-        <a href="/persona-guide.md" target="_blank" className="text-zinc-400 hover:text-white text-sm underline underline-offset-2">
+        <a
+          href="/persona-guide.md"
+          target="_blank"
+          className="text-sm font-medium underline underline-offset-2 transition-colors hover:opacity-80"
+          style={{ color: "#20FE8F" }}
+        >
           Persona Guide
         </a>
       </header>
 
       {/* Tabs */}
       <Tabs defaultValue={0} className="flex-1 flex flex-col min-h-0">
-        <div className="border-b px-6 flex-shrink-0">
+        <div className="border-b px-6 flex-shrink-0 bg-white">
           <TabsList variant="line">
             <TabsTrigger value={0}>Report</TabsTrigger>
             <TabsTrigger value={1}>Simulation Feed</TabsTrigger>
-            <TabsTrigger value={2}>Chat with Panelists</TabsTrigger>
-            <TabsTrigger value={3}>Analytics</TabsTrigger>
+            <TabsTrigger value={2}>Analytics</TabsTrigger>
+            <TabsTrigger value={3}>Chat with Panelists</TabsTrigger>
           </TabsList>
         </div>
 
@@ -414,12 +446,12 @@ export function SynchronyPanel({ reportMd }: { reportMd: string }) {
           <FeedTab />
         </TabsContent>
 
-        <TabsContent value={2} className="flex-1 min-h-0">
-          <ChatTab />
+        <TabsContent value={2} className="flex-1 min-h-0 overflow-y-auto">
+          <VisualizationsPanel />
         </TabsContent>
 
-        <TabsContent value={3} className="flex-1 min-h-0 overflow-y-auto">
-          <VisualizationsPanel />
+        <TabsContent value={3} className="flex-1 min-h-0">
+          <ChatTab />
         </TabsContent>
       </Tabs>
     </div>

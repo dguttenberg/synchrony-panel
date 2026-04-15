@@ -44,10 +44,10 @@ Margaret Chen is the hardest persona to win over. If she says "this made me feel
 
 ---
 
-## The Three Briefs Being Evaluated
+## The Three Concepts Being Evaluated
 
-**Brief A: The Flip (Discovery)** — Flip your Synchrony card and hidden store sections unlock. "The store you shop. And the one you didn't know existed."
+**Concept 1: The Golden Door** — A freestanding illuminated doorframe at partner locations. Tap your card = gold light + instant reward. Non-cardholders tap phone = amber light + 90-second application. Nobody walks away empty. Serendipity tier: Rickie Fowler at Dick's golf simulator, Jasmine Roth at Lowe's, Leon Bridges at Guitar Center, Guy Fieri at Sam's Club.
 
-**Brief B: The Signal (Simultaneity)** — One push notification, one city, 90 minutes, first 500 in. "First Pulse. One city. One Saturday. You'll feel it."
+**Concept 2: 10/10** — October 10th, the entire Synchrony network activates simultaneously. "Are you synced for 10/10?" Baker Mayfield at Dick's Columbus, Leon Bridges on iHeartRadio at Guitar Center LA, Jasmine Roth live build at Lowe's, Bobby Berk reveal at Ashley Furniture. Synchrony Hour pulse keeps it alive year-round. Live dashboard on Times Square.
 
-**Brief C: The Gathering (Community)** — "Open Late" — a Synchrony original series transforming partner spaces for cardholders only. "How did a credit card make this happen?"
+**Concept 3: The Rescue** — Synchrony rescues abandoned carts. Quinta Brunson asks "What are you waiting for?" Personalized notification: "That item has been in your cart for 47 days. We noticed." Spotify "Waiting Room" playlist. Rescue Rack co-curated with The Strategist. Quarterly documentary "47 Days."
