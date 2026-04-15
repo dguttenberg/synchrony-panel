@@ -86,14 +86,83 @@ const feedActions = allActions
   .sort((a, b) => a.round_num - b.round_num);
 
 // ---------------------------------------------------------------------------
-// Report Tab
+// Report Tab — supports regenerating via Claude analysis of sim data
 // ---------------------------------------------------------------------------
 function ReportTab({ reportMd }: { reportMd: string }) {
-  const html = useMemo(() => markdownToHtml(reportMd), [reportMd]);
+  const [liveReport, setLiveReport] = useState<string>("");
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [error, setError] = useState<string>("");
+
+  // Show live report if we just generated one, otherwise the file-based one
+  const displayMd = liveReport || reportMd;
+  const html = useMemo(() => markdownToHtml(displayMd), [displayMd]);
+
+  async function regenerate() {
+    setIsGenerating(true);
+    setError("");
+    setLiveReport("");
+    try {
+      const res = await fetch("/api/report/regenerate", { method: "POST" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const reader = res.body?.getReader();
+      if (!reader) throw new Error("No response stream");
+      const decoder = new TextDecoder();
+      let buffer = "";
+      let accumulated = "";
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split("\n");
+        buffer = lines.pop() || "";
+        for (const line of lines) {
+          if (line.startsWith("data: ")) {
+            try {
+              const obj = JSON.parse(line.slice(6));
+              if (obj.type === "text-delta" && obj.delta) {
+                accumulated += obj.delta;
+                setLiveReport(accumulated);
+              }
+            } catch {
+              /* skip non-JSON keepalives */
+            }
+          }
+        }
+      }
+    } catch (e) {
+      setError(e instanceof Error ? e.message : String(e));
+    } finally {
+      setIsGenerating(false);
+    }
+  }
+
   return (
     <ScrollArea className="h-[calc(100vh-140px)]">
       <div className="max-w-3xl mx-auto py-6 px-4">
+        <div className="flex items-center justify-between mb-4 pb-3 border-b" style={{ borderColor: "rgba(0,5,49,0.08)" }}>
+          <div className="text-xs text-muted-foreground">
+            {liveReport ? "Live regenerated report (this session)" : "Showing saved report"}
+          </div>
+          <Button
+            onClick={regenerate}
+            disabled={isGenerating}
+            size="sm"
+            style={{ backgroundColor: "#000531", color: "#FFFFFF", borderRadius: 12 }}
+          >
+            {isGenerating ? "Analyzing..." : "Regenerate Report"}
+          </Button>
+        </div>
+        {error && (
+          <div className="mb-4 p-3 text-xs" style={{ backgroundColor: "#FFE4E0", color: "#9b2820", borderRadius: 8 }}>
+            Error: {error}
+          </div>
+        )}
         <div dangerouslySetInnerHTML={{ __html: html }} />
+        {isGenerating && !liveReport && (
+          <div className="text-sm text-muted-foreground mt-4">
+            Sending {`275`} panelist contributions to Claude Sonnet 4.6 for analysis. This takes 30-90 seconds...
+          </div>
+        )}
       </div>
     </ScrollArea>
   );
