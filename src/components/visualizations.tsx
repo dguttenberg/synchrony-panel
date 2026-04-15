@@ -60,11 +60,11 @@ function getTopDescriptors(wordMap: Record<string, number>, limit: number = 15) 
 // ---------------------------------------------------------------------------
 const CONCEPT_INSIGHTS: Record<string, string> = {
   golden_door:
-    "Most discussed and most debated. The Golden Door generated the strongest reactions — both positive and negative. Consumer skeptics (Margaret, Denise) pushed back hard on trust, while partner personas valued the physical mechanic and data story. High controversy = high engagement. This is the concept people argue about, which means it's the one they remember.",
+    "Lost ground from the prior round. Even with early introduction in Phase 0, the Golden Door drew only modest engagement — 17 mentions vs. The Rescue's 107. The structured experiment design eliminated the first-mover advantage that gave it dominance previously. Partner personas still gravitated to the data story (Alex Rivera, Priya Mehta), but consumer skeptics largely skipped it for The Rescue's emotional pull.",
   ten_ten:
-    "Near-universal approval but low conversation volume. Panelists who engaged with 10/10 liked it — but fewer engaged. The simultaneity concept is harder to react to in abstract than a physical door or a rescued cart. 10/10 may need more concrete local details to spark debate. The concept isn't weak — it's underspecified.",
+    "Effectively invisible. Despite the moderator introducing 10•10 twice (R33, R38) with the new 10-hours-10-partners structure, only one panelist mention surfaced. The abstract simultaneity concept can't compete with concepts that have concrete imagery to react to. Without specific moments people can picture as vividly as 'a couch waiting 47 days,' agents have nothing to argue about. The concept needs sharper attachment points.",
   rescue:
-    "The emotional favorite. The Rescue earned the highest net sentiment and the most organic engagement after the Golden Door. The 'gap between wanting and having' insight resonated deeply with consumer panelists. Margaret Chen — the hardest persona to win — showed the most openness to this concept. If the goal is long-term brand love over launch spectacle, The Rescue is the strongest territory.",
+    "The audience favorite by a wide margin. 6× more discussion than the Golden Door and 100× more than 10•10. Every panelist engaged 9-21 times. The 'lives interrupted' framing — couches waiting for Sundays, wedding dresses in carts from weddings that happened anyway — generated the strongest concept-recognition we've seen across any run. The 98% positive sentiment is striking but worth scrutinizing: it suggests the emotional hook is so compelling that even Margaret Chen stopped using her 'is this a trap?' lens. If the goal is debut launch attention and broad audience love, this is the territory.",
 };
 
 // ---------------------------------------------------------------------------

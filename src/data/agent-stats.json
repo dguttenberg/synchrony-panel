@@ -4,232 +4,238 @@
     "stats": [
       {
         "action_types": {
-          "CREATE_COMMENT": 13,
-          "CREATE_POST": 43,
-          "QUOTE_POST": 8
+          "CREATE_COMMENT": 15,
+          "CREATE_POST": 11,
+          "QUOTE_POST": 10,
+          "REPOST": 6
         },
-        "agent_id": 2,
-        "agent_name": "Panel_Moderator",
-        "first_action_time": "2026-04-15T02:08:52.503214",
-        "last_action_time": "2026-04-15T01:47:09.843351",
-        "reddit_actions": 31,
-        "total_actions": 64,
-        "twitter_actions": 33
+        "agent_id": 8,
+        "agent_name": "PriyaMehta",
+        "first_action_time": "2026-04-15T20:21:09.477154",
+        "last_action_time": "2026-04-15T19:05:19.285207",
+        "reddit_actions": 15,
+        "total_actions": 42,
+        "twitter_actions": 27
+      },
+      {
+        "action_types": {
+          "CREATE_COMMENT": 15,
+          "CREATE_POST": 20,
+          "DO_NOTHING": 1,
+          "LIKE_POST": 1,
+          "QUOTE_POST": 2,
+          "REPOST": 2
+        },
+        "agent_id": 1,
+        "agent_name": "Dr._Susan_Weaver",
+        "first_action_time": "2026-04-15T20:39:18.428157",
+        "last_action_time": "2026-04-15T19:04:53.423084",
+        "reddit_actions": 25,
+        "total_actions": 41,
+        "twitter_actions": 16
+      },
+      {
+        "action_types": {
+          "CREATE_COMMENT": 16,
+          "CREATE_POST": 11,
+          "DO_NOTHING": 2,
+          "QUOTE_POST": 3,
+          "REPOST": 2
+        },
+        "agent_id": 7,
+        "agent_name": "KeishaOkafor",
+        "first_action_time": "2026-04-15T20:16:05.732205",
+        "last_action_time": "2026-04-15T19:05:21.347029",
+        "reddit_actions": 16,
+        "total_actions": 34,
+        "twitter_actions": 18
+      },
+      {
+        "action_types": {
+          "CREATE_COMMENT": 10,
+          "CREATE_POST": 5,
+          "DO_NOTHING": 4,
+          "LIKE_POST": 2,
+          "QUOTE_POST": 9,
+          "REPOST": 3
+        },
+        "agent_id": 9,
+        "agent_name": "RachelTorres",
+        "first_action_time": "2026-04-15T20:16:05.730990",
+        "last_action_time": "2026-04-15T19:05:21.346555",
+        "reddit_actions": 11,
+        "total_actions": 33,
+        "twitter_actions": 22
+      },
+      {
+        "action_types": {
+          "CREATE_COMMENT": 14,
+          "CREATE_POST": 7,
+          "LIKE_POST": 1,
+          "QUOTE_POST": 7,
+          "REPOST": 3
+        },
+        "agent_id": 12,
+        "agent_name": "AlexRivera",
+        "first_action_time": "2026-04-15T20:26:33.156328",
+        "last_action_time": "2026-04-15T19:05:19.285489",
+        "reddit_actions": 15,
+        "total_actions": 32,
+        "twitter_actions": 17
+      },
+      {
+        "action_types": {
+          "CREATE_COMMENT": 10,
+          "CREATE_POST": 11,
+          "QUOTE_POST": 7,
+          "REPOST": 4
+        },
+        "agent_id": 13,
+        "agent_name": "DrSusanWeaver",
+        "first_action_time": "2026-04-15T20:16:05.732704",
+        "last_action_time": "2026-04-15T19:05:49.949760",
+        "reddit_actions": 10,
+        "total_actions": 32,
+        "twitter_actions": 22
+      },
+      {
+        "action_types": {
+          "CREATE_COMMENT": 16,
+          "CREATE_POST": 7,
+          "DO_NOTHING": 1,
+          "QUOTE_POST": 7
+        },
+        "agent_id": 0,
+        "agent_name": "Rachel_Torres",
+        "first_action_time": "2026-04-15T20:34:05.219268",
+        "last_action_time": "2026-04-15T19:05:21.346929",
+        "reddit_actions": 16,
+        "total_actions": 31,
+        "twitter_actions": 15
+      },
+      {
+        "action_types": {
+          "CREATE_COMMENT": 12,
+          "CREATE_POST": 9,
+          "QUOTE_POST": 6,
+          "REPOST": 3
+        },
+        "agent_id": 10,
+        "agent_name": "MikeReardon",
+        "first_action_time": "2026-04-15T20:16:05.733116",
+        "last_action_time": "2026-04-15T19:05:19.286011",
+        "reddit_actions": 12,
+        "total_actions": 30,
+        "twitter_actions": 18
+      },
+      {
+        "action_types": {
+          "CREATE_COMMENT": 6,
+          "CREATE_POST": 12,
+          "DO_NOTHING": 1,
+          "LIKE_POST": 1,
+          "QUOTE_POST": 6,
+          "REPOST": 1
+        },
+        "agent_id": 4,
+        "agent_name": "Jennifer_Park",
+        "first_action_time": "2026-04-15T20:16:05.731470",
+        "last_action_time": "2026-04-15T19:06:12.878325",
+        "reddit_actions": 8,
+        "total_actions": 27,
+        "twitter_actions": 19
       },
       {
         "action_types": {
           "CREATE_COMMENT": 13,
-          "CREATE_POST": 4,
-          "QUOTE_POST": 3,
-          "REPOST": 1
+          "CREATE_POST": 6,
+          "FOLLOW": 1,
+          "LIKE_POST": 1,
+          "QUOTE_POST": 6
         },
-        "agent_id": 0,
-        "agent_name": "Rachel_Torres",
-        "first_action_time": "2026-04-15T02:12:49.905239",
-        "last_action_time": "2026-04-15T01:47:26.417901",
+        "agent_id": 6,
+        "agent_name": "DeniseWashington",
+        "first_action_time": "2026-04-15T20:11:09.007152",
+        "last_action_time": "2026-04-15T19:05:29.135587",
         "reddit_actions": 13,
-        "total_actions": 21,
-        "twitter_actions": 8
+        "total_actions": 27,
+        "twitter_actions": 14
+      },
+      {
+        "action_types": {
+          "CREATE_COMMENT": 10,
+          "CREATE_POST": 6,
+          "QUOTE_POST": 6,
+          "REPOST": 4
+        },
+        "agent_id": 11,
+        "agent_name": "JenniferPark",
+        "first_action_time": "2026-04-15T20:11:09.005925",
+        "last_action_time": "2026-04-15T19:05:19.285763",
+        "reddit_actions": 10,
+        "total_actions": 26,
+        "twitter_actions": 16
+      },
+      {
+        "action_types": {
+          "CREATE_COMMENT": 10,
+          "CREATE_POST": 6,
+          "LIKE_POST": 1,
+          "QUOTE_POST": 4,
+          "REPOST": 3
+        },
+        "agent_id": 2,
+        "agent_name": "Panel_Moderator",
+        "first_action_time": "2026-04-15T20:48:53.445282",
+        "last_action_time": "2026-04-15T19:05:49.950841",
+        "reddit_actions": 11,
+        "total_actions": 24,
+        "twitter_actions": 13
+      },
+      {
+        "action_types": {
+          "CREATE_COMMENT": 7,
+          "CREATE_POST": 10,
+          "DO_NOTHING": 1,
+          "LIKE_POST": 1,
+          "QUOTE_POST": 5
+        },
+        "agent_id": 3,
+        "agent_name": "Margaret_Chen",
+        "first_action_time": "2026-04-15T20:12:28.863839",
+        "last_action_time": "2026-04-15T19:05:43.003109",
+        "reddit_actions": 8,
+        "total_actions": 24,
+        "twitter_actions": 16
       },
       {
         "action_types": {
           "CREATE_COMMENT": 4,
           "CREATE_POST": 12,
-          "QUOTE_POST": 1,
-          "REPOST": 1
+          "QUOTE_POST": 5
         },
-        "agent_id": 13,
-        "agent_name": "DrSusanWeaver",
-        "first_action_time": "2026-04-15T01:59:05.024900",
-        "last_action_time": "2026-04-15T01:46:54.147301",
-        "reddit_actions": 10,
-        "total_actions": 18,
-        "twitter_actions": 8
+        "agent_id": 5,
+        "agent_name": "MargaretChen",
+        "first_action_time": "2026-04-15T20:16:05.732553",
+        "last_action_time": "2026-04-15T19:07:52.245046",
+        "reddit_actions": 4,
+        "total_actions": 21,
+        "twitter_actions": 17
       },
       {
         "action_types": {
-          "CREATE_COMMENT": 7,
+          "CREATE_COMMENT": 6,
           "CREATE_POST": 5,
           "QUOTE_POST": 3,
           "REPOST": 2
         },
-        "agent_id": 10,
-        "agent_name": "MikeReardon",
-        "first_action_time": "2026-04-15T02:05:14.524669",
-        "last_action_time": "2026-04-15T01:47:09.842745",
-        "reddit_actions": 7,
-        "total_actions": 17,
-        "twitter_actions": 10
-      },
-      {
-        "action_types": {
-          "CREATE_COMMENT": 8,
-          "CREATE_POST": 4,
-          "LIKE_COMMENT": 1,
-          "QUOTE_POST": 2
-        },
-        "agent_id": 8,
-        "agent_name": "PriyaMehta",
-        "first_action_time": "2026-04-15T02:12:05.349701",
-        "last_action_time": "2026-04-15T01:47:45.306062",
-        "reddit_actions": 9,
-        "total_actions": 15,
-        "twitter_actions": 6
-      },
-      {
-        "action_types": {
-          "CREATE_COMMENT": 8,
-          "CREATE_POST": 1,
-          "DISLIKE_POST": 1,
-          "LIKE_POST": 1,
-          "QUOTE_POST": 3,
-          "REPOST": 1
-        },
-        "agent_id": 6,
-        "agent_name": "DeniseWashington",
-        "first_action_time": "2026-04-15T02:12:05.349470",
-        "last_action_time": "2026-04-15T01:48:08.007271",
-        "reddit_actions": 9,
-        "total_actions": 15,
-        "twitter_actions": 6
-      },
-      {
-        "action_types": {
-          "CREATE_COMMENT": 7,
-          "CREATE_POST": 3,
-          "DISLIKE_POST": 1,
-          "QUOTE_POST": 1,
-          "REPOST": 2
-        },
-        "agent_id": 12,
-        "agent_name": "AlexRivera",
-        "first_action_time": "2026-04-15T02:12:05.350362",
-        "last_action_time": "2026-04-15T01:48:08.005742",
-        "reddit_actions": 8,
-        "total_actions": 14,
-        "twitter_actions": 6
-      },
-      {
-        "action_types": {
-          "CREATE_COMMENT": 7,
-          "CREATE_POST": 2,
-          "LIKE_POST": 2,
-          "QUOTE_POST": 1,
-          "REPOST": 1
-        },
-        "agent_id": 4,
-        "agent_name": "Jennifer_Park",
-        "first_action_time": "2026-04-15T02:12:05.350196",
-        "last_action_time": "2026-04-15T01:48:08.007069",
-        "reddit_actions": 8,
-        "total_actions": 13,
-        "twitter_actions": 5
-      },
-      {
-        "action_types": {
-          "CREATE_COMMENT": 6,
-          "QUOTE_POST": 7
-        },
-        "agent_id": 7,
-        "agent_name": "KeishaOkafor",
-        "first_action_time": "2026-04-15T02:12:05.350061",
-        "last_action_time": "2026-04-15T01:47:45.303887",
-        "reddit_actions": 6,
-        "total_actions": 13,
-        "twitter_actions": 7
-      },
-      {
-        "action_types": {
-          "CREATE_COMMENT": 6,
-          "CREATE_POST": 4,
-          "QUOTE_POST": 2,
-          "REPOST": 1
-        },
-        "agent_id": 9,
-        "agent_name": "RachelTorres",
-        "first_action_time": "2026-04-15T02:08:52.503766",
-        "last_action_time": "2026-04-15T01:47:26.418793",
-        "reddit_actions": 6,
-        "total_actions": 13,
-        "twitter_actions": 7
-      },
-      {
-        "action_types": {
-          "CREATE_COMMENT": 4,
-          "CREATE_POST": 3,
-          "DISLIKE_POST": 1,
-          "LIKE_POST": 1,
-          "QUOTE_POST": 2,
-          "REPOST": 1
-        },
         "agent_id": 14,
         "agent_name": "PanelModerator",
-        "first_action_time": "2026-04-15T02:01:48.437880",
-        "last_action_time": "2026-04-15T01:47:09.843643",
+        "first_action_time": "2026-04-15T20:16:05.731768",
+        "last_action_time": "2026-04-15T19:05:19.284917",
         "reddit_actions": 6,
-        "total_actions": 12,
-        "twitter_actions": 6
-      },
-      {
-        "action_types": {
-          "CREATE_COMMENT": 5,
-          "CREATE_POST": 3,
-          "DISLIKE_POST": 1,
-          "QUOTE_POST": 1,
-          "REPOST": 1
-        },
-        "agent_id": 3,
-        "agent_name": "Margaret_Chen",
-        "first_action_time": "2026-04-15T02:12:49.904808",
-        "last_action_time": "2026-04-15T01:47:45.303332",
-        "reddit_actions": 6,
-        "total_actions": 11,
-        "twitter_actions": 5
-      },
-      {
-        "action_types": {
-          "CREATE_COMMENT": 5,
-          "CREATE_POST": 3,
-          "QUOTE_POST": 2,
-          "REPOST": 1
-        },
-        "agent_id": 5,
-        "agent_name": "MargaretChen",
-        "first_action_time": "2026-04-15T02:12:05.349893",
-        "last_action_time": "2026-04-15T01:47:45.304998",
-        "reddit_actions": 5,
-        "total_actions": 11,
-        "twitter_actions": 6
-      },
-      {
-        "action_types": {
-          "CREATE_COMMENT": 5,
-          "CREATE_POST": 1,
-          "LIKE_POST": 1,
-          "QUOTE_POST": 3
-        },
-        "agent_id": 1,
-        "agent_name": "Dr._Susan_Weaver",
-        "first_action_time": "2026-04-15T02:05:14.525123",
-        "last_action_time": "2026-04-15T01:47:45.304543",
-        "reddit_actions": 6,
-        "total_actions": 10,
-        "twitter_actions": 4
-      },
-      {
-        "action_types": {
-          "CREATE_COMMENT": 6,
-          "CREATE_POST": 1,
-          "LIKE_POST": 1,
-          "QUOTE_POST": 1
-        },
-        "agent_id": 11,
-        "agent_name": "JenniferPark",
-        "first_action_time": "2026-04-15T02:08:52.504607",
-        "last_action_time": "2026-04-15T01:48:34.671796",
-        "reddit_actions": 7,
-        "total_actions": 9,
-        "twitter_actions": 2
+        "total_actions": 16,
+        "twitter_actions": 10
       }
     ]
   },
