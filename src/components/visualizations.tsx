@@ -143,6 +143,14 @@ function SentimentScorecard() {
                 <span>{s.total_mentions} mentions</span>
                 <span>Net: {s.net_sentiment > 0 ? "+" : ""}{s.net_sentiment}</span>
               </div>
+
+              {/* Slide-ready insight */}
+              <div
+                className="mt-4 pt-4 border-t text-xs leading-relaxed"
+                style={{ borderColor: "rgba(0,5,49,0.08)", color: "#000531" }}
+              >
+                {CONCEPT_INSIGHTS[key]}
+              </div>
             </div>
           );
         })}
