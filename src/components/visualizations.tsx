@@ -56,6 +56,18 @@ function getTopDescriptors(wordMap: Record<string, number>, limit: number = 15) 
 }
 
 // ---------------------------------------------------------------------------
+// Slide-ready analysis insights
+// ---------------------------------------------------------------------------
+const CONCEPT_INSIGHTS: Record<string, string> = {
+  golden_door:
+    "Most discussed and most debated. The Golden Door generated the strongest reactions — both positive and negative. Consumer skeptics (Margaret, Denise) pushed back hard on trust, while partner personas valued the physical mechanic and data story. High controversy = high engagement. This is the concept people argue about, which means it's the one they remember.",
+  ten_ten:
+    "Near-universal approval but low conversation volume. Panelists who engaged with 10/10 liked it — but fewer engaged. The simultaneity concept is harder to react to in abstract than a physical door or a rescued cart. 10/10 may need more concrete local details to spark debate. The concept isn't weak — it's underspecified.",
+  rescue:
+    "The emotional favorite. The Rescue earned the highest net sentiment and the most organic engagement after the Golden Door. The 'gap between wanting and having' insight resonated deeply with consumer panelists. Margaret Chen — the hardest persona to win — showed the most openness to this concept. If the goal is long-term brand love over launch spectacle, The Rescue is the strongest territory.",
+};
+
+// ---------------------------------------------------------------------------
 // A. Sentiment Scorecard
 // ---------------------------------------------------------------------------
 function SentimentScorecard() {
@@ -69,7 +81,7 @@ function SentimentScorecard() {
     <div>
       <h3 className="font-semibold mb-3 text-lg" style={{ color: "#000531" }}>Sentiment Scorecard</h3>
       <p className="text-xs text-muted-foreground mb-4">
-        Sentiment analysis across concept discussions
+        Panelist-only sentiment (moderator excluded) · 121 unique contributions across 72 simulated rounds
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {concepts.map((key) => {
