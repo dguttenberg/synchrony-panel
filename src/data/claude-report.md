@@ -1,111 +1,131 @@
-# Synchrony Financial Brand Activation — Audience Research Brief
+# Brand Gravity Panel Experiment — Summary for Context Transfer
 
----
+## The Question
 
-## TL;DR
+Should Brand Gravity be sold as a **product** (top line on the SOW) or held as DCP's **working model** (the philosophy behind what clients actually buy — Core, Velocity, Holistic Search)?
 
-The Golden Door is the recommendation. It was the only concept that generated sustained, multi-session engagement across both consumer and partner panelists, and it was the only concept that passed Margaret Chen's trap test — barely. The risk is that the panel's vocabulary around Golden Door was so semantically repetitive ("phased rollout," "genuine value," "without feeling gimmicky") that it signals social desirability bias, not authentic enthusiasm. Before you build, you need to know if the light-up mechanic actually creates delight in the wild or just reads as a loyalty card with theater.
+This simulation was designed to inform the conversation with John before DCP locks the architecture.
 
----
+## What We Built
 
-## What The Panel Actually Said
+A synthetic panel evaluation using MiroFish-Offline — an agent-based simulation engine running locally with Docker + Neo4j + a qwen2.5:32b LLM on a RunPod H100.
 
-Across 299 total contributions (moderator excluded), The Golden Door dominated the conversation. Counting named references and concept-tagged contributions, Golden Door appeared in approximately 38–42 distinct contributions across the panel. 10•10 appeared in roughly 25–28 contributions. The Rescue appeared in fewer than 12 contributions, and at least half of those were either tangential or explicitly negative.
+**Nine named personas**, each with detailed professional backstories, specific emotional histories, and calibrated skepticism levels:
 
-The conversation concentrated almost entirely in two personas: consumer panelists (Margaret Chen, Denise Washington, Priya Mehta, Keisha Okafor) and select partner panelists (Jennifer Park, Mike Reardon, Rachel Torres). Dr. Susan Weaver's contributions were high in volume but functionally disengaged from concept evaluation — she spent the majority of her panel time discussing healthcare financing transparency and educational webinars, with only glancing references to the concepts. Alex Rivera, despite being the CRO voice and the panelist most structurally positioned to evaluate checkout integration, spent the majority of his contributions discussing retail tech in the abstract and posted at least four tweets in Mandarin or generic innovation language that did not engage with any concept directly.
+| Persona | Role | Skepticism |
+|---|---|---|
+| Margaret Chen | CMO, $400M DTC beauty brand — burned by $280K slideware in 2023 | 9/10 |
+| Tom Blackwell | Head of Procurement, $2B healthcare — "show me the line item" | 10/10 |
+| Yuki Nakamura | Industry analyst — publicly torches framework-as-positioning | 9/10 |
+| Carlos Mendez | ECD, independent shop, 22 years — allergic to physics metaphors | 9/10 |
+| Rachel Steinberg | CMO, 420-location restaurant chain — needs Monday morning usability | 7/10 |
+| James Okafor | VP Brand, growth-stage hardware — theory-friendly but finance team needs line items | 5/10 |
+| Priya Ramanathan | Account Director, Stagwell agency — has sold ten $1.4M integrated engagements | 6/10 |
+| Danielle Foster | Head of Strategy, Stagwell agency — has renamed frameworks twice after client feedback | 6/10 |
+| Devon Williams | Associate Strategist, DCP — the person who actually briefs creative teams | 4/10 |
 
-The Dick's Sporting Goods account engaged meaningfully with 10•10, which is expected given Baker Mayfield's placement there. The Lowe's and Sam's Club accounts gave brief, brand-safe affirmations. The Affirm and Chase Sapphire competitor accounts participated as observers and their contributions consistently read as competitive intelligence gathering, not honest concept evaluation — their remarks should be read with that caveat.
+Plus a **DCP Presenter** (introduces the framings) and a **Panel Moderator** (drives the structured evaluation).
 
-**Notable absence:** Keisha Okafor — the panel's shareability test, BNPL-native, the "would I post this?" persona — never once asked whether she would post any of these concepts. She praised simplicity in the abstract but never applied her stated evaluation framework to any concept. That is a meaningful gap.
+## The Two Framings Tested
 
----
+**Framing A — Brand Gravity is the product.**
+Brand Gravity is the thing a client buys. Top line on the SOW. Inside it: Core (60-90 day encoding engagement), Velocity, Holistic Search as sub-products. Physics vocabulary is productized. Contract says "Brand Gravity."
 
-## Concept-Level Findings
+**Framing B — Brand Gravity is the working model.**
+Brand Gravity is how DCP operates — philosophy, method. Not a line on a SOW. Clients buy Core, Velocity, and Holistic Search as Forces. Brand Gravity is why it all hangs together and why DCP is different.
 
-### The Golden Door
+## The Experiment Structure
 
-**Discussion volume:** ~40 contributions with direct concept engagement
+12 scripted moderator events across 60 active rounds:
+- R0: Welcome and panel intro
+- R2: DCP Presenter introduces first framing
+- R6, R10: Targeted follow-ups to specific panelists
+- R15: DCP Presenter introduces second framing
+- R19, R23: Follow-ups + procurement pressure test
+- R28: Cross-comparison (which framing wins which room?)
+- R35: Forced tradeoff (pick one, no fence-sitting)
+- R42: Attribute isolation (name vs structure)
+- R48: Devil's advocate (what's the trap with each?)
+- R55: Final verdicts
 
-**Sentiment direction:** Predominantly positive, but the positive language is formulaic to the point of concern. Nearly every panelist used near-identical phrasing — "phased rollout," "genuine value at each phase," "without feeling gimmicky" — across multiple contributions and multiple sessions. This is either genuine convergent insight or a panel that learned the vocabulary of approval and kept using it.
+Between events, agents discuss freely on Reddit and Twitter. Reddit produced 98-100% on-topic discussion; Twitter was 5% on-topic noise.
 
-**Who engaged:** Margaret Chen (7+ contributions), Jennifer Park (6+), Rachel Torres (5+), Denise Washington (5+), Priya Mehta (5+), Mike Reardon (4+), Keisha Okafor (4+), Dr. Susan Weaver (2)
+## What We Ran
 
-**Strongest signal:** Margaret Chen — the panel's designated skeptic and the hardest person to convince — moved from skepticism to conditional endorsement: "The phased rollout of #THEGOLDENDOOR seems well-planned, offering a balanced approach that builds anticipation without overwhelming customers. However, it's crucial every phase delivers genuine value and maintains transparency." (R20) That's not enthusiasm. But it's the absence of a "this is a trap" reaction, which for Margaret Chen is the bar.
+- **Run 1:** Full 72 rounds, both platforms, Framing A introduced first. Complete data.
+- **Run 2:** Reddit stalled at round 28 (CAMEL-AI timeout bug). Partial data through Framing B intro and start of cross-comparison. Framing A first.
+- **Run 3:** In progress. **Reversed framing order** — Framing B introduced first to control for primacy bias.
 
-**Friction signal:** Jennifer Park raised the sharpest operational concern: "The key lies in translating this emotional resonance into tangible benefits that simplify financing decisions during critical moments like at Lowe's flagship store." (R22, Twitter) She's telling you the concept works emotionally but she cannot see the checkout mechanic. If she can't see it, her customers won't feel it.
+## Findings
 
-**Verdict:** Golden Door is the concept the panel chose to trust, which matters. But "trust" here means "I don't see a trap yet" — not "I'm excited." The phased rollout logic resonated because it doesn't demand consumer commitment before proving value, which is exactly what a Synchrony skeptic needs. The Serendipity tier (celebrity moments, gold light) generated zero organic enthusiasm in the transcripts. No one talked about Rickie Fowler or Leon Bridges in the context of Golden Door. The mechanic — tap card, light changes — is what people responded to. The celebrity overlay is unvalidated by this panel and you should not assume it adds lift.
+### What Was Stable Across Both Runs
 
----
+1. **The "prove it" demand is universal.** All 9 panelists, both runs, demanded case studies, pilot projects, and real-world evidence before either framing holds. This was the single most consistent signal. Whichever framing DCP picks, the pitch must include proof of performance.
 
-### 10•10
+2. **The components are what buyers engage with.** Agents spent more time discussing Core, Velocity, and Holistic Search — their pricing, billing structure, individual deliverables — than the Brand Gravity wrapper. In Run 2 especially, agents drilled into component-level pricing regardless of which framing was on the table.
 
-**Discussion volume:** ~27 contributions with direct concept engagement
+3. **Yuki Nakamura, Rachel Steinberg, and Priya Ramanathan consistently leaned Framing B** across both runs. The analyst, the practical buyer, and the seller all found the working model framing more compelling for differentiation.
 
-**Sentiment direction:** Mixed. Partner accounts (Dick's specifically) were enthusiastic. Consumer panelists were cooler, consistently pairing any positive note with a transparency caveat that reads as polite skepticism.
+4. **The skeptics were softer than expected** in both runs. Margaret never invoked her $280K burn. Tom never said "I can't line-item this." Carlos never called it physics-metaphor theater. LLM agents tend toward agreeableness — the direction of preference is reliable but the intensity of objection is understated.
 
-**Who engaged:** Dick's Sporting Goods account (4 contributions), Priya Mehta (3 contributions), Margaret Chen (3 contributions), Mike Reardon (3 contributions), Dr. Susan Weaver (3 contributions), Rachel Torres (2 contributions)
+### What Run 1 Showed (Complete Data)
 
-**Strongest signal:** Priya Mehta, the sophistication test persona: "I am a strong advocate for #EcosystemSophistication, which is why I find the #10•10 concept particularly compelling. The simultaneous activation across partners could create a powerful network effect and offer consumers a seamless experience across services. It's not just about the live events or celebrity appearances; it's about integrating these moments into a larger ecosystem of value that resonates with users on both logical and emotional levels." (R11) This is the only panelist who articulated a strategic logic for 10•10 beyond "it would generate buzz."
+Devon Williams gave the clearest structural comparison:
 
-**Friction signal:** Keisha Okafor delivered the most damaging read: "I agree that the #10•10 concept can drive a lot of buzz, but it feels complex compared to THE GOLDEN DOOR which offers a simpler marketing mechanism. It's important for strategies to connect effectively without overwhelming consumers." (R14) A 32-year-old BNPL-native who has never heard of Synchrony found 10•10 too complicated to parse. That is a serious problem for a brand trying to acquire a generation that doesn't know it exists.
+> "Framing A excels during SOW reviews due to its clear productization of Brand Gravity with distinct components (Core: Strategy & Insight, Velocity, Holistic Search). This makes it easier for procurement teams like Margaret Chen's to justify budget allocations. Conversely, Framing B shines in the pitch room by emphasizing DCP's unique philosophy and holistic approach. However, translating this broader vision into actionable daily work requires additional effort."
 
-**Verdict:** 10•10 is a partner activation dressed as a consumer campaign. The Dick's account liked it because Baker Mayfield at their Columbus store is a Dick's win, not a Synchrony win. The Sync Hour recurring format got mentioned approvingly by the Adweek observer and Jennifer Park, but those are infrastructure enthusiasts, not consumers. Nothing in the panel data suggests an ordinary cardholder would understand what October 10th means for them or why they should show up. The concept also has zero representation from anyone who looks like Keisha Okafor — the audience Synchrony most needs to reach — and the one representative explicitly said it was too complex.
+The pattern: **Framing A wins the SOW room, Framing B wins the pitch room.** Neither wins all three rooms (pitch, SOW, Monday morning all-hands) without work.
 
----
+### What Run 2 Added
 
-### The Rescue
+Run 2 complicated the run 1 picture. Agents engaging with Framing A focused almost entirely on the components — not on the Brand Gravity product wrapper. They wanted pricing breakdowns for Core, Velocity, and Holistic Search individually. The "Brand Gravity as product" label didn't add perceived value beyond bundling.
 
-**Discussion volume:** Fewer than 12 contributions with substantive engagement
+Carlos Mendez and Danielle Foster, who leaned A in run 1, flipped to B in run 2. Margaret Chen moved from non-committal to leaning B. This suggests individual framing preferences are not stable — but the underlying demand (component clarity + proof) is.
 
-**Sentiment direction:** Negative from the two consumer panelists who engaged seriously. Positive from competitor accounts (whose approval is not an asset). Mike Reardon and Margaret Chen offered late-panel, brief endorsements of the theatrical element, but neither engaged with The Rescue systematically.
+### The Emergent Insight
 
-**Who engaged:** Denise Washington (1 direct contribution), Margaret Chen (1 direct contribution), Mike Reardon (1 contribution), Rachel Torres (1 contribution), Affirm Competitor Account (1 contribution)
+The most decision-relevant finding is not which framing won. It is that **the panel naturally gravitated toward the components as the purchasable units**, regardless of the wrapper. This suggests a potential third option:
 
-**Strongest signal:** Rachel Torres noted something operationally relevant: "The AI bundling approach in #THE RESCUE offers a unique commercial mechanic, reading intent beyond simple discounts, which can genuinely enhance the consumer experience." (R65) That cross-network bundle intelligence is the most commercially differentiated element of the concept and it got one mention.
+**Brand Gravity as a flexible positioning layer that adapts to the room. Core, Velocity, and Holistic Search are the stable, purchasable units.**
+- In the SOW: the components are the line items
+- In the pitch: Brand Gravity is the differentiation story
+- In the all-hands: Brand Gravity is the operating philosophy
+- The wrapper adapts; the components stay fixed
 
-**Friction signal:** Denise Washington, the near-prime healthcare-anxious consumer who reads every term: "I'm definitely feeling wary about #TheRescue concept. While it might seem compelling on the surface, it feels like a manipulative sales tactic aimed at triggering FOMO around delayed purchases. It's important to ensure that any marketing strategy doesn't exploit consumer emotions unfairly." (R10) Denise is Synchrony's CareCredit customer. She rejected The Rescue on the grounds that it felt exploitative. That's a brand safety problem.
+### What DCP Needs to Prove (Either Framing)
 
-**Verdict:** The Rescue's data is too thin to read confidently — but what exists is directionally bad for consumer trust. The concept's strongest mechanic (cross-network AI bundle intelligence) was almost entirely undiscussed. The theatrical IRL component generated two late-panel nods from Mike Reardon and Margaret Chen, but neither engaged with the specifics of Mall of America installations or Quinta Brunson. Dr. Susan Weaver — the panelist who most needs ambient brand awareness before the patient arrives — never engaged with The Rescue at all, despite it being the concept most structurally designed to serve that use case. Do not over-read The Rescue's data in either direction. The concept was effectively abandoned by the panel.
+1. **If Framing A (product):** That Brand Gravity as a line item doesn't become slideware. Show a case study where Core produced a measurably better brief.
+2. **If Framing B (working model):** That "philosophy" survives procurement. Show how to approve an invoice for Core/Velocity/Holistic Search without needing Brand Gravity to justify the spend.
+3. **For either:** Real-world evidence. Not a framework document. A client engagement where the architecture produced a measurable outcome. The panel asked for this nine-for-nine.
 
----
+### Key Quotes for Reference
 
-## The Cross-Persona Patterns
+**Tom Blackwell (Procurement):** "From a procurement standpoint, this framing could be effective if it clearly demonstrates value and ROI for the client over typical consultative services. 'Show me the numbers' on how Brand Gravity tangibly improves business outcomes."
 
-Consumer panelists and partner panelists converged on Golden Door vocabulary but for different reasons. Consumer panelists (Margaret, Denise, Keisha) responded to its non-overwhelming entry mechanic — you tap, something happens, you are not immediately sold to. Partner panelists (Jennifer Park, Rachel Torres) responded to the phased rollout as an operational framework — it gave them a way to imagine staged implementation without a full-store commitment.
+**Yuki Nakamura (Industry Analyst):** "For a buyer perspective like Margaret's, Framing A provides clearer delineation of what is being offered with 'Brand Gravity' as the top line item on an SOW. It simplifies budget justification."
 
-Margaret Chen broke pattern once and it matters. Her initial response to all three concepts in R10 placed The Rescue above Golden Door: "I find #THESCUE concept powerful due to its emotional appeal and personalized rescue offers." She then spent the remainder of her contributions endorsing Golden Door and never returned to The Rescue. This reversal is unexplained by the transcript and should be followed up. Did The Rescue's manipulation concern surface after more reflection? Did the panel dynamic push her toward the consensus position?
+**Priya Ramanathan (Agency Seller):** "It's vital to demonstrate that Framing B is more than mere philosophy — it should involve unique intellectual property and tangible methods."
 
-Denise Washington never broke pattern. Every contribution reinforced her stated frustration with emotional manipulation and opacity. She is consistent enough to be treated as a reliable signal rather than a social follower.
+**Rachel Steinberg (Practical Buyer):** "Could we get more specific about the billings under Brand Gravity? Understanding the pricing of Core, Velocity, and Holistic Search individually would be key for procurement reviews."
 
-Keisha Okafor never applied her stated framework. She said multiple times that simplicity matters, that hidden fees are a dealbreaker, that clear benefits are what consumers want. She endorsed Golden Door on simplicity grounds. But she never answered the question she was brought in to answer: would she post any of this? That silence should concern the creative team more than anything she actually said.
+**Carlos Mendez (Creative Skeptic):** "From a seller's perspective, it clearly defines the service offering and its components, which can be very beneficial for setting expectations with clients."
 
----
+**Devon Williams (Internal User):** "Framing A seems more suited for the SOW review process due to its structured and delineated approach. On the other hand, Framing B's unique philosophical positioning shines in pitch rooms but needs to be anchored more firmly in practical applications."
 
-## Critical Limitations Of This Data
+## What's Next
 
-The panel has a vocabulary convergence problem that is severe. Across 11 separate accounts, the phrases "phased rollout," "genuine value at each phase," and "without feeling gimmicky" appear with near-identical construction. This is not organic language. It suggests either the simulation scaffolding seeded these phrases, the moderator's framing shaped respondent language, or social desirability dynamics caused panelists to echo each other rather than generate independent reactions. Any claim about Golden Door's resonance should be weighted accordingly.
+- **Run 3** is in progress with reversed framing order (B first, then A) to control for primacy bias
+- When you have a refined POV from the John conversation, bring it back and we can **re-question the panel** using the MiroFish interaction workbench (survey + individual persona chat)
+- The full data will be built into an **interactive panel site** (Next.js on Vercel, same pattern as the Synchrony panel) with report, analytics, and live persona chat
 
-The Rescue is dramatically under-discussed. Fewer than 12 contributions across a 299-contribution panel is not a finding — it's an absence. It could mean the concept failed to engage, or it could mean the panel was never structured to evaluate it seriously. You cannot make a go/no-go decision on The Rescue from this data.
+## Technical Notes
 
-Dr. Susan Weaver's contributions are the most significant casualty of panel design. She was brought in as the CareCredit dentist who needs ambient awareness — the one persona for whom The Rescue's "lives interrupted" narrative should have resonated most directly. She spent her panel time hosting financial literacy webinars and discussing healthcare financing transparency in the abstract. She never evaluated a single concept with the specificity her persona required. Her data is unusable for concept evaluation purposes.
-
-Alex Rivera, the CRO voice who should have been the most critical evaluator of embedded checkout vs. card mechanic, posted multiple generic retail tech takes and contributed nothing that engaged with the mechanics of any concept at a commercial level.
-
-The competitor accounts (Affirm, Chase Sapphire) should be excluded from sentiment aggregation. An Affirm account endorsing The Rescue and a Chase Sapphire account endorsing Golden Door's sophistication are competitive observations, not consumer reactions.
-
----
-
-## Recommendation
-
-**Run The Golden Door. Fix three things first.**
-
-The panel gave you a trust signal, not an excitement signal. That is actually appropriate for Synchrony's problem: the brand doesn't have an awareness gap, it has a trust deficit. A concept that passes the "is this a trap?" test with Margaret Chen is more valuable at this stage than a concept that generates buzz with Priya Mehta.
-
-**Fix one:** Strip the celebrity Serendipity tier from the launch creative. Not one panelist mentioned Rickie Fowler, Jasmine Roth, Leon Bridges, or Guy Fieri in the context of what made Golden Door feel credible or exciting. The tap-and-light mechanic is doing all the work. The celebrity overlay adds cost, adds complexity, and adds a layer that could tip the experience from "genuine" to "promotional stunt" for exactly the Margaret Chen consumer who is currently your best signal of success.
-
-**Fix two:** Jennifer Park told you the concept needs a clearer financing benefit at the moment of tap. "Translating this emotional resonance into tangible benefits that simplify financing decisions during critical moments" is not a design note — it's a product requirement. What does the cardholder actually get when the door lights gold? If the answer is "a reward" and that reward isn't defined in the activation experience, you are recreating the opacity that burned Margaret in the first place.
-
-**Fix three:** Get Keisha Okafor in a real room with the mechanic. She is your BNPL-native acquisition target, she praised simplicity, she never answered whether she'd share this, and she's the only panelist whose approval would tell you whether Golden Door can travel beyond existing cardholders. Everything else this panel told you is about retention and trust repair. You have no data on acquisition.
-
-**Questions this simulation did not answer:** Does the gold light mechanic create genuine delight or does it read as juvenile to an in-store shopper? What happens when the amber "apply now" light fires and the application takes longer than 90 seconds? What is the failure mode when someone taps and nothing works — and how does that moment land for a consumer who already suspects Synchrony is a trap? None of that was tested here.
+- MiroFish-Offline at ~/MiroFish-Offline — 3 Docker containers
+- RunPod H100 with qwen2.5:32b — GPU pegged at 100% util, 34% VRAM (Ollama sequential bottleneck)
+- Reddit platform carried all signal (98-100% on-topic); Twitter was noise (5%)
+- Run 2 hit the known CAMEL-AI timeout bug (Reddit stuck at R28)
+- Ollama model unloading caused intermittent Cloudflare 524s — mitigated with keep_alive=-1
+- Planned: migrate to vLLM for concurrent batching (4-6x speedup)
+- HTML report at ~/Downloads/BrandGravity_Run1_Analysis.html
+- Seed document at ~/Downloads/brand_gravity_seed.txt
+- Experiment spec at ~/Downloads/mirofish_brand_gravity_experiment.md

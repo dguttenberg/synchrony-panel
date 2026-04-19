@@ -1,243 +1,133 @@
 {
   "concept_mentions": {
-    "golden_door": 111,
-    "ten_ten": 78,
-    "rescue": 24,
-    "general": 112
+    "framing_a": 32,
+    "framing_b": 53
   },
   "concept_sentiment": {
-    "golden_door": {
-      "positive": 243,
-      "negative": 61,
-      "total_mentions": 111,
-      "net_sentiment": 182,
-      "sentiment_ratio": 0.8
+    "framing_a": {
+      "positive": 70,
+      "negative": 7,
+      "total_mentions": 32,
+      "net_sentiment": 63,
+      "sentiment_ratio": 0.91
     },
-    "ten_ten": {
-      "positive": 169,
-      "negative": 31,
-      "total_mentions": 78,
-      "net_sentiment": 138,
-      "sentiment_ratio": 0.84
-    },
-    "rescue": {
-      "positive": 52,
-      "negative": 9,
-      "total_mentions": 24,
-      "net_sentiment": 43,
-      "sentiment_ratio": 0.85
+    "framing_b": {
+      "positive": 117,
+      "negative": 19,
+      "total_mentions": 53,
+      "net_sentiment": 98,
+      "sentiment_ratio": 0.86
     }
   },
-  "golden_door_words": {
-    "thegoldendoor": 105,
-    "phased": 79,
-    "value": 77,
-    "rollout": 74,
-    "trust": 67,
-    "engagement": 60,
-    "genuine": 59,
-    "approach": 56,
-    "phase": 50,
-    "digital": 39,
-    "strategy": 38,
-    "gimmicky": 36,
-    "feeling": 34,
-    "overwhelming": 34,
-    "term": 32,
-    "effectively": 28,
-    "anticipation": 28,
-    "integration": 24,
-    "physical": 23,
-    "commerce": 22,
-    "extension": 22,
-    "building": 21,
-    "ensuring": 20,
-    "balances": 20,
-    "widget": 20,
-    "adds": 20,
-    "both": 19,
-    "ensures": 18,
-    "broader": 18,
-    "crucial": 18,
-    "comprehensive": 17,
-    "integrating": 17,
-    "maintaining": 17,
-    "ecosystem": 16,
-    "seamlessly": 16,
-    "fostering": 15,
-    "transparency": 14,
-    "build": 14,
+  "framing_a_words": {
+    "framing": 39,
+    "daily": 21,
+    "real": 21,
+    "world": 20,
+    "brand": 20,
+    "gravity": 20,
+    "client": 19,
+    "creative": 18,
+    "pilot": 17,
+    "practical": 16,
+    "operational": 15,
+    "projects": 14,
     "tangible": 14,
-    "solutions": 13
+    "feedback": 14,
+    "value": 14,
+    "actionable": 13,
+    "holistic": 12,
+    "clients": 11,
+    "carlos": 11,
+    "priya": 11,
+    "devon": 11,
+    "framework": 10,
+    "approach": 10,
+    "core": 10,
+    "velocity": 10,
+    "search": 10,
+    "work": 10,
+    "mendez": 10,
+    "ramanathan": 10,
+    "williams": 10
   },
-  "ten_ten_words": {
-    "engagement": 64,
-    "value": 48,
-    "trust": 43,
-    "transparency": 37,
-    "high": 35,
-    "genuine": 34,
-    "profile": 33,
-    "structured": 29,
-    "collaborations": 29,
-    "timeline": 27,
-    "hour": 25,
-    "events": 23,
-    "thegoldendoor": 20,
-    "ensuring": 20,
-    "live": 17,
-    "gimmicky": 17,
-    "offers": 16,
-    "overwhelming": 16,
-    "maintaining": 16,
-    "phase": 16,
-    "build": 16,
-    "building": 15,
-    "drive": 14,
-    "throughout": 14,
-    "phased": 14,
-    "marketing": 14,
+  "framing_b_words": {
+    "framing": 54,
+    "holistic": 30,
+    "core": 29,
+    "brand": 28,
+    "client": 28,
+    "velocity": 28,
+    "search": 28,
+    "gravity": 27,
+    "procurement": 27,
+    "real": 26,
+    "philosophy": 25,
+    "world": 24,
+    "feedback": 23,
+    "strategy": 23,
+    "insight": 23,
+    "tangible": 21,
+    "framework": 20,
+    "clear": 18,
+    "actionable": 17,
+    "philosophical": 17,
+    "value": 16,
+    "clients": 16,
+    "model": 14,
+    "effectively": 14,
     "approach": 14,
-    "year": 13,
-    "sync": 13,
-    "strategic": 13,
-    "consistent": 12,
-    "format": 12,
-    "both": 12,
-    "term": 12,
-    "significant": 12,
-    "maintains": 12,
-    "pulse": 11,
-    "continuous": 11,
-    "maintain": 11,
-    "delivers": 11
-  },
-  "rescue_words": {
-    "emotional": 14,
-    "therescue": 9,
-    "theatrical": 8,
-    "lives": 8,
-    "interrupted": 8,
-    "powerful": 8,
-    "rescue": 7,
-    "installations": 7,
-    "approach": 7,
-    "life": 6,
-    "moments": 6,
-    "create": 6,
-    "trust": 6,
-    "making": 6,
-    "resonance": 5,
-    "potential": 5,
-    "engagement": 5,
-    "events": 5,
-    "might": 5,
-    "effectively": 4,
-    "strong": 4,
-    "compelling": 4,
-    "purchases": 4,
-    "build": 4,
-    "loyalty": 4,
-    "storytelling": 4,
-    "mechanic": 4,
-    "personalized": 4,
-    "offers": 4,
-    "deferredinterestaware": 4,
-    "live": 4,
-    "emotions": 4,
-    "revised": 3,
-    "empathetic": 3,
-    "connected": 3,
-    "potentially": 3,
-    "narrative": 3,
-    "dramatizing": 3,
-    "core": 3,
-    "connections": 3
+    "benefits": 14,
+    "outcomes": 14,
+    "working": 13,
+    "deliverables": 13,
+    "practical": 13
   },
   "agent_concept_counts": {
-    "Denise Washington": {
-      "golden_door": 20,
-      "ten_ten": 14,
-      "rescue": 7
-    },
-    "Dr. Susan Weaver": {
-      "golden_door": 8,
-      "ten_ten": 8,
-      "rescue": 1
-    },
-    "Rachel Torres": {
-      "golden_door": 16,
-      "ten_ten": 7,
-      "rescue": 4
-    },
     "Margaret Chen": {
-      "golden_door": 17,
-      "ten_ten": 16,
-      "rescue": 6
+      "framing_a": 0,
+      "framing_b": 7,
+      "general": 48
     },
-    "Mike Reardon": {
-      "golden_door": 4,
-      "ten_ten": 4,
-      "rescue": 2
+    "Tom Blackwell": {
+      "framing_a": 2,
+      "framing_b": 2,
+      "general": 29
     },
-    "Jennifer Park": {
-      "golden_door": 12,
-      "ten_ten": 6,
-      "rescue": 0
+    "Yuki Nakamura": {
+      "framing_a": 6,
+      "framing_b": 14,
+      "general": 37
     },
-    "Alex Rivera": {
-      "golden_door": 3,
-      "ten_ten": 3,
-      "rescue": 1
+    "Carlos Mendez": {
+      "framing_a": 5,
+      "framing_b": 2,
+      "general": 43
     },
-    "Keisha Okafor": {
-      "golden_door": 11,
-      "ten_ten": 3,
-      "rescue": 1
+    "Rachel Steinberg": {
+      "framing_a": 3,
+      "framing_b": 10,
+      "general": 36
     },
-    "Priya Mehta": {
-      "golden_door": 6,
-      "ten_ten": 3,
-      "rescue": 0
+    "James Okafor": {
+      "framing_a": 2,
+      "framing_b": 3,
+      "general": 42
     },
-    "Dicks Sporting Goods Account": {
-      "golden_door": 3,
-      "ten_ten": 5,
-      "rescue": 0
+    "Priya Ramanathan": {
+      "framing_a": 4,
+      "framing_b": 7,
+      "general": 45
     },
-    "Affirm Competitor Account": {
-      "golden_door": 1,
-      "ten_ten": 1,
-      "rescue": 1
+    "Danielle Foster": {
+      "framing_a": 2,
+      "framing_b": 0,
+      "general": 41
     },
-    "Lowes Account": {
-      "golden_door": 2,
-      "ten_ten": 2,
-      "rescue": 0
-    },
-    "Adweek Observer Account": {
-      "golden_door": 3,
-      "ten_ten": 2,
-      "rescue": 0
-    },
-    "Sams Club Account": {
-      "golden_door": 1,
-      "ten_ten": 1,
-      "rescue": 0
-    },
-    "Chase Sapphire Competitor Account": {
-      "golden_door": 4,
-      "ten_ten": 2,
-      "rescue": 1
-    },
-    "Marketing Brew Account": {
-      "golden_door": 0,
-      "ten_ten": 1,
-      "rescue": 0
+    "Devon Williams": {
+      "framing_a": 8,
+      "framing_b": 8,
+      "general": 35
     }
-  },
-  "deduped_count": 299,
-  "total_count": 319,
-  "panel_count": 270,
-  "ecosystem_count": 31
+  }
 }
